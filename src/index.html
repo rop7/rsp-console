@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>@RSp Console</title>
+    
+    <link href="./lib/mdi.min.css" rel="stylesheet">
+    <link href="./lib/vuetify.min.css" rel="stylesheet">
+    <link href="./lib/toastify.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./lib/fonts/materialdesignicons-webfont.ttf">
+
+    <script src="./lib/vue.min.js"></script>
+    <script src="./lib/vuetify.min.js"></script>
+    
+    <script src="./api/util.js"></script>
+
+    <link href="./styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="app" style="padding: 14px; min-width: 100% !important">
+
+        <v-container style="margin: 0; padding: 0; width: 100%; min-width: 100%; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 7px" >
+
+            <v-main style="overflow: hidden">
+
+                    <v-card class="pa-0 theme--dark">
+                        
+                        <v-divider style="margin: 0; padding: 0;"></v-divider>
+                        
+                        <v-sheet class="log-container theme--dark" style="height: 85vh; overflow: hidden; background-color: #0a0a0a !important;" id="logContainer">
+                            <div v-for="(log, index) in logs" :key="index" class="log-entry">{{ log }}</div>
+                        </v-sheet>
+
+                    </v-card>
+    
+            </v-main>
+
+        </v-container>
+    </div>
+
+<script src="./renderer.js"></script>
+
+</body>
+</html>
+
+  

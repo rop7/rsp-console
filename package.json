@@ -1,0 +1,79 @@
+{
+  "name": "rsp-console",
+  "bin": {
+    "rsp-console": "wrapper.sh",
+    "rspcmd": "wrapper.sh"
+  },
+  "version": "1.0.0",
+  "main": "wrapper.sh",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --linux",
+    "build:deb": "electron-builder --linux deb",
+    "build:appimage": "electron-builder --linux AppImage",
+    "build:snap": "electron-builder --linux snap"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.6.4"
+  },
+  "build": {
+    "appId": "com.rsp.console",
+    "productName": "@RSp Console",
+    "copyright": "Copyright © 2023 RSP",
+    "linux": {
+      "target": [
+        "deb",
+        "AppImage",
+        "snap"
+      ],
+      "icon": "src/asset/icon.png",
+      "category": "Utility",
+      "maintainer": "@ROPSOFT <main@ropsoft.cloud>",
+      "synopsis": "RSP Command Line Console",
+      "description": "A terminal interface for RSP package management",
+      "desktop": {
+        "Name": "RSP Console",
+        "Comment": "Command line interface",
+        "StartupWMClass": "rsp-console",
+        "Terminal": "false"
+      },
+      "artifactName": "${productName}-${version}-${arch}.${ext}"
+    },
+    "deb": {
+      "depends": [
+        "libgtk-3-0",
+        "libnotify4",
+        "libnss3",
+        "libxss1",
+        "libxtst6",
+        "xdg-utils",
+        "libatspi2.0-0",
+        "libuuid1",
+        "libappindicator3-1",
+        "libsecret-1-0"
+      ]
+    },
+    "snap": {
+      "summary": "RSP Command Line Console",
+      "grade": "stable",
+      "confinement": "strict",
+      "plugs": [
+        "home",
+        "network"
+      ]
+    },
+    "extraResources": [
+      {
+        "from": "src/asset",
+        "to": "asset",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ]
+  },
+  "dependencies": {
+    "rsp-libcore.js": "file:../rsp-libcore.js"
+  }
+}

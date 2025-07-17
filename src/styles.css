@@ -1,0 +1,35 @@
+* {
+  font-size: 95%;
+}
+
+body, html, #root {
+    margin: 0;
+    padding: 10px;
+    background: transparent !important;
+    background-color: transparent !important;
+    overflow: hidden !important; 
+}
+
+#app {
+    overflow: hidden;
+    border-radius: 7px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3)
+}
+
+.log-container {
+    height: 300px;
+    overflow-y: scroll;
+    background: #000000;
+    background-color: #000000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: monospace;
+  }
+  
+  .log-entry {
+    white-space: pre-wrap;
+  }
+
+  
