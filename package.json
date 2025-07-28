@@ -1,5 +1,8 @@
 {
-  "name": "rsp-console",
+  "name": "@rop7/rsp-console",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "bin": {
     "rsp-console": "wrapper.sh",
     "rspcmd": "wrapper.sh"
@@ -74,6 +77,6 @@
     ]
   },
   "dependencies": {
-    "rsp-libcore.js": "file:../rsp-libcore.js"
+    "@rop7/rsp-libcore.js": "^1.3.5"
   }
 }
