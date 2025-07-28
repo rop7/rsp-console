@@ -7,7 +7,7 @@
     "rsp-console": "wrapper.sh",
     "rspcmd": "wrapper.sh"
   },
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "wrapper.sh",
   "scripts": {
     "start": "electron .",
