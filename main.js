@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const RSp = require('rsp-libcore.js').default;
+const RSp = require('@rop7/rsp-libcore.js').default;
 const { spawn } = require('child_process');
 const { app, screen, BrowserWindow } = require('electron');
 
